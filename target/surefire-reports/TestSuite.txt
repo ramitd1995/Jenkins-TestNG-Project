@@ -1,4 +1,16 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.204 sec
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 30.125 s <<< FAILURE! - in TestSuite
+loginFareye(com.javacodegeeks.testng.maven.Login)  Time elapsed: 29.91 s  <<< FAILURE!
+org.openqa.selenium.NoSuchWindowException: 
+no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=89.0.4389.114)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ramit-QA-2035ThinkPad-L14-Gen-1', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.8.0-50-generic', java.version: '1.8.0_292'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: /tmp/.com.google.Chrome.2XVqSD}, goog:chromeOptions: {debuggerAddress: localhost:35329}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b6dd2395072de2dec2b98ed2ac7d6898
+	at com.javacodegeeks.testng.maven.Login.loginFareye(Login.java:27)
+

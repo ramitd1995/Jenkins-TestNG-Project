@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-TestNgMavenExampleSuite">
-              <span class="suite-name border-passed">TestNgMavenExampleSuite</span>
+              <span class="suite-name border-failed">TestNgMavenExampleSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,7 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-TestNgMavenExampleSuite" class="hide-methods failed suite-TestNgMavenExampleSuite"> (hide)</a> <!-- hide-methods failed suite-TestNgMavenExampleSuite -->
+                      <a href="#" panel-name="suite-TestNgMavenExampleSuite" class="show-methods failed suite-TestNgMavenExampleSuite"> (show)</a> <!-- show-methods failed suite-TestNgMavenExampleSuite -->
+                    </span>
+                    <div class="method-list-content failed suite-TestNgMavenExampleSuite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-TestNgMavenExampleSuite" title="com.javacodegeeks.testng.maven.Login" hash-for-method="loginFareye">loginFareye</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-TestNgMavenExampleSuite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -99,11 +113,6 @@
                       <a href="#" panel-name="suite-TestNgMavenExampleSuite" class="show-methods passed suite-TestNgMavenExampleSuite"> (show)</a> <!-- show-methods passed suite-TestNgMavenExampleSuite -->
                     </span>
                     <div class="method-list-content passed suite-TestNgMavenExampleSuite">
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-TestNgMavenExampleSuite" title="com.javacodegeeks.testng.maven.TestNgMavenExample" hash-for-method="exampleOfTestNgMaven">exampleOfTestNgMaven</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-TestNgMavenExampleSuite" title="com.javacodegeeks.testng.maven.TestNgMavenSecondClass" hash-for-method="oneMoreTest">oneMoreTest</a> <!-- method navigator-link -->
@@ -121,6 +130,40 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-TestNgMavenExampleSuite" class="panel TestNgMavenExampleSuite">
+          <div class="suite-TestNgMavenExampleSuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.javacodegeeks.testng.maven.Login</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginFareye">
+                  </a> <!-- loginFareye -->
+                  <span class="method-name">loginFareye</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=89.0.4389.114)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ramit-QA-2035ThinkPad-L14-Gen-1&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.8.0-50-generic&apos;, java.version: &apos;1.8.0_292&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: /tmp/.com.google.Chrome.2XVqSD}, goog:chromeOptions: {debuggerAddress: localhost:35329}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b6dd2395072de2dec2b98ed2ac7d6898
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:837)
+	at com.javacodegeeks.testng.maven.Login.loginFareye(Login.java:27)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestNgMavenExampleSuite-class-failed -->
           <div class="suite-TestNgMavenExampleSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -132,21 +175,6 @@
                   <a name="oneMoreTest">
                   </a> <!-- oneMoreTest -->
                   <span class="method-name">oneMoreTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-TestNgMavenExampleSuite-class-passed -->
-          <div class="suite-TestNgMavenExampleSuite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.javacodegeeks.testng.maven.TestNgMavenExample</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="exampleOfTestNgMaven">
-                  </a> <!-- exampleOfTestNgMaven -->
-                  <span class="method-name">exampleOfTestNgMaven</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -163,7 +191,7 @@
 &lt;suite verbose=&quot;0&quot; name=&quot;TestNgMavenExampleSuite&quot;&gt;
   &lt;test name=&quot;TestNgMavenTest&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.javacodegeeks.testng.maven.TestNgMavenExample&quot;/&gt;
+      &lt;class name=&quot;com.javacodegeeks.testng.maven.Login&quot;/&gt;
       &lt;class name=&quot;com.javacodegeeks.testng.maven.TestNgMavenSecondClass&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- TestNgMavenTest --&gt;
@@ -206,9 +234,9 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'exampleOfTestNgMaven')
-data.setCell(0, 2, 'com.javacodegeeks.testng.maven.TestNgMavenExample')
-data.setCell(0, 3, 5);
+data.setCell(0, 1, 'loginFareye')
+data.setCell(0, 2, 'com.javacodegeeks.testng.maven.Login')
+data.setCell(0, 3, 29903);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'oneMoreTest')
 data.setCell(1, 2, 'com.javacodegeeks.testng.maven.TestNgMavenSecondClass')
@@ -217,7 +245,7 @@ window.suiteTableData['TestNgMavenExampleSuite']= { tableData: data, tableDiv: '
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 ms</span>
+              <span class="suite-total-time">Total running time: 29 seconds</span>
               <div id="times-div-TestNgMavenExampleSuite">
               </div> <!-- times-div-TestNgMavenExampleSuite -->
             </div> <!-- times-div -->
@@ -243,9 +271,11 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.javacodegeeks.testng.maven.TestNgMavenExample</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.javacodegeeks.testng.maven.Login</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">exampleOfTestNgMaven</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">loginFareye</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
@@ -253,7 +283,7 @@ return data;
               <div class="chronological-class-name">com.javacodegeeks.testng.maven.TestNgMavenSecondClass</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">oneMoreTest</span>
-                <span class="method-start">7 ms</span>
+                <span class="method-start">29910 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
